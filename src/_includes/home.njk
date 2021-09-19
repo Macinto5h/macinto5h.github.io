@@ -1,0 +1,27 @@
+---
+layout: layout.njk
+title: Welcome to Mac's Website
+---
+<section class="jumbotron">
+  <h1>Hi, I'm Mac!</h1>
+  <p><em>I am a Front End Engineer. See more about me and my portfolio below!</em></p>
+</section>
+<section class="content">
+  {{ content | safe }}
+  <section class="portfolio">
+    <a class="portfolio__card" href="https://github.com/Macinto5h/eigencu">
+      <picture>
+        <source type="image/webp" srcset="/assets/img/portfolio/eigencu/eigencu.webp">
+        <img src="/assets/img/portfolio/eigencu/eigencu.jpg" alt="Snapshot of EigenCU application" loading="lazy" width="314" height="314">
+        <span>EigenCU</span>
+      </picture>
+    </a>
+    <a class="portfolio__card" href="https://github.com/Macinto5h/Sorting-Algorithm-Visualizer">
+      <picture>
+        <source type="image/webp" srcset="/assets/img/portfolio/vogel-sorter/vogel-sorter.webp">
+        <img src="/assets/img/portfolio/vogel-sorter/vogel-sorter.jpg" alt="Snapshot of vogel sorter application" loading="lazy" width="314" height="314">
+      </picture>
+      <span>Vogel Sorter</span>
+    </a>
+  </section>
+</section>

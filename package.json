@@ -1,0 +1,32 @@
+{
+  "name": "MacCamaraPersonalSite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm-run-all build:*",
+    "build:sass": "sass src/assets/scss/styles.scss dist/assets/styles.css",
+    "build:postcss": "postcss dist/assets/styles.css --use autoprefixer -d dist/assets",
+    "build:eleventy": "eleventy",
+    "start": "npm-run-all build:* --parallel watch:*",
+    "watch:eleventy": "eleventy --serve --quiet",
+    "watch:sass": "sass --watch src/assets/scss/styles.scss dist/assets/styles.css",
+    "watch:postcss": "postcss dist/assets/styles.css --use autoprefixer -d dist/assets -w"
+  },
+  "keywords": [],
+  "author": "Mac Camara",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "autoprefixer": "^10.2.6",
+    "cross-env": "^7.0.3",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.5",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "postcss-cli": "^8.3.1",
+    "postcss-import": "^14.0.2",
+    "precss": "^4.0.0"
+  }
+}
