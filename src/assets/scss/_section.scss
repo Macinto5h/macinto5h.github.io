@@ -1,0 +1,17 @@
+.section {
+  align-items: center;
+  display: grid;
+  min-height: 100vh;
+
+  &.-dark-to-teal {
+    background: linear-gradient(to bottom, $dark 0%, $primary 100%);
+  }
+
+  &.-irresistible {
+    background-color: $secondary;
+  }
+
+  &.-teal {
+    background-color: $primary;
+  }
+}

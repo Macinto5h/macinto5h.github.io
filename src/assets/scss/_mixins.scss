@@ -1,3 +1,11 @@
-@mixin teal-irresistible-gradient() {
-  background: linear-gradient(to bottom, $primary 0%, $secondary 100%);
+@mixin animation($animation-val) {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: $animation-val;
+  }
+}
+
+@mixin transition($transition-val...) {
+  @media (prefers-reduced-motion: no-preference) {
+    transition: $transition-val;
+  }
 }
