@@ -15,18 +15,14 @@ title: Welcome to Mac's Website
   <div class="content">
     <h2>Portfolio</h2>
     <div class="portfolio">
-      <a class="portfolio__card" href="https://github.com/Macinto5h/eigencu" aria-label="EigenCU">
-        <picture>
-          <source type="image/webp" srcset="/assets/img/portfolio/eigencu/eigencu.webp">
-          <img src="/assets/img/portfolio/eigencu/eigencu.jpg" alt="Snapshot of EigenCU application" loading="lazy" width="314" height="314">
-        </picture>
-      </a>
-      <a class="portfolio__card" href="https://github.com/Macinto5h/Sorting-Algorithm-Visualizer" aria-label="Vogel Sorter">
-        <picture>
-          <source type="image/webp" srcset="/assets/img/portfolio/vogel-sorter/vogel-sorter.webp">
-          <img src="/assets/img/portfolio/vogel-sorter/vogel-sorter.jpg" alt="Snapshot of vogel sorter application" loading="lazy" width="314" height="314">
-        </picture>
-      </a>
+      {% for project in site.portfolio %}
+        <a class="portfolio__card" href="{{ project.href }}" aria-label="{{ project.name }}">
+          <picture>
+            <source type="image/webp" srcset="{{ project.webpSrc }}">
+            <img src="{{ project.jpgSrc }}" alt="{{ project.name }} thumbnail" loading="lazy" width="314" height="314">
+          </picture>
+        </a>
+      {% endfor %}
     </div>
   </div>
 </section>
