@@ -8,7 +8,7 @@
     "build:sass": "sass src/assets/scss/styles.scss dist/assets/styles.css",
     "build:postcss": "postcss dist/assets/styles.css --use autoprefixer -d dist/assets",
     "build:eleventy": "eleventy",
-    "build:img": "copyfiles -u 3 ./src/assets/img/**/* ./dist/assets/img/",
+    "build:img": "copyfiles -E -u 3 ./src/assets/img/**/* ./dist/assets/img/",
     "start": "npm-run-all build:* --parallel watch:*",
     "lint": "npm-run-all lint:*",
     "lint:sass": "npx stylelint \"src/assets/scss/**/*.scss\"",
