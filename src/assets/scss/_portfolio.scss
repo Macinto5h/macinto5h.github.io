@@ -1,58 +1,45 @@
 .portfolio {
   display: grid;
-  max-width: 100%;
   grid-gap: 2.5rem;
   grid-template-columns: 1fr;
   justify-items: center;
+  max-width: 100%;
 
   &__card {
-    display: block;
     box-sizing: border-box;
-    width: 100%;
+    color: $light;
+    display: block;
+    font-size: 1.8rem;
     height: auto;
     position: relative;
-    color: $light;
-    font-size: 1.8rem;
+    width: 100%;
 
     img {
-      width: 100%;
-      height: auto;
       display: block;
-    }
-
-    span {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      opacity: 0;
-      transition: opacity .125s ease-in-out;
-      z-index: 1;
+      height: auto;
+      width: 100%;
     }
 
     &::before {
-      content: attr(aria-label);
-      position: absolute;
-      z-index: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 0;
-      display: flex;
+      @include transition(height 0.125s ease-in-out, color 0.125s ease-in-out);
       align-items: center;
-      justify-content: center;
+      background-color: rgba($dark, 0.8);
+      bottom: 0;
       color: transparent;
+      content: attr(aria-label);
+      display: flex;
+      height: 0;
+      justify-content: center;
+      left: 0;
       overflow: hidden;
-      background-color: rgba($dark, .8);
-      @include transition(height .125s ease-in-out, color .125s ease-in-out);
+      position: absolute;
+      right: 0;
+      z-index: 0;
     }
 
-    &:hover {
-
-      &::before {
-        height: 100%;
-        color: $light;
-      }
+    &:hover::before {
+      color: $light;
+      height: 100%;
     }
   }
 

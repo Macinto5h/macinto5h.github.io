@@ -10,6 +10,8 @@
     "build:eleventy": "eleventy",
     "build:img": "copyfiles -u 3 src/assets/img/**/* dist/assets/img/",
     "start": "npm-run-all build:* --parallel watch:*",
+    "lint": "npm-run-all lint:*",
+    "lint:sass": "npx stylelint \"src/assets/scss/**/*.scss\"",
     "watch:eleventy": "eleventy --serve --quiet",
     "watch:sass": "sass --watch src/assets/scss/styles.scss dist/assets/styles.css",
     "watch:postcss": "postcss dist/assets/styles.css --use autoprefixer -d dist/assets -w"
@@ -25,7 +27,10 @@
     "npm-run-all": "^4.1.5",
     "postcss": "^8.3.5",
     "rimraf": "^3.0.2",
-    "sass": "^1.41.1"
+    "sass": "^1.41.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "stylelint-config-standard": "^22.0.0"
   },
   "dependencies": {
     "postcss-cli": "^8.3.1",
