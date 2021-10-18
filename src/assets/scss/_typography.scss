@@ -1,5 +1,5 @@
 a {
-  color: $primary;
+  color: $light;
   font-size: 1.6rem;
 }
 
@@ -9,7 +9,8 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  color: $tertiary;
+  text-transform: uppercase;
+  color: $light;
 }
 
 h1 {

@@ -1,0 +1,13 @@
+.section {
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+
+  &.-irresistible {
+    background-color: $secondary;
+  }
+
+  &.-teal {
+    background-color: $primary;
+  }
+}

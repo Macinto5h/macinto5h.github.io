@@ -17,7 +17,7 @@
     img {
       width: 100%;
       height: auto;
-      display: inline-block;
+      display: block;
     }
 
     span {
@@ -31,33 +31,27 @@
     }
 
     &::before {
-      content: '';
+      content: attr(aria-label);
       position: absolute;
       z-index: 0;
       bottom: 0;
       left: 0;
       right: 0;
       height: 0;
-      background-color: rgba($primary, .9);
-      transition: height .125s ease-in-out;
-    }
-
-    &:nth-child(odd) {
-
-      &::before {
-        background-color: rgba($secondary, .9);
-      }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: transparent;
+      overflow: hidden;
+      background-color: rgba($dark, .8);
+      @include transition(height .125s ease-in-out, color .125s ease-in-out);
     }
 
     &:hover {
 
       &::before {
         height: 100%;
-      }
-
-      span {
-        transition-delay: .125s;
-        opacity: 1;
+        color: $light;
       }
     }
   }
