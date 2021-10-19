@@ -9,10 +9,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        working-directory: ./
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js
@@ -21,6 +17,7 @@ jobs:
         node-version: '14.x'
     - run: npm install
     - run: npm run build
+    - run: echo "www.mjcamara.com" > dist/CNAME
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
