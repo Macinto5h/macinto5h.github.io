@@ -20,7 +20,7 @@ jobs:
     - run: echo "www.mjcamara.com" > dist/CNAME
     - run: pwd
     - run: ls
-    - run: ls dist
+    - run: ls dist/assets/img
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
