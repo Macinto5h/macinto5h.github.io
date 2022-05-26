@@ -9,4 +9,4 @@ Hi, my name is Mac. I have been in software development professionally for a lit
 
 When I'm away from the screen, you can usually find me enjoying the great outdoors, or playing video games with my wife, cats, and bunnies.
 
-👫🐈🐈🐈🐈🐇🐇
+👫🐈🐈🐇🐇
