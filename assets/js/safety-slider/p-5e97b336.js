@@ -1,8 +1,8 @@
-import { B as BUILD, c as consoleDevInfo, p as plt, w as win, H, d as doc, N as NAMESPACE, a as promiseResolve, b as bootstrapLazy } from './index-5a89652d.js';
+import { B as BUILD, c as consoleDevInfo, p as plt, w as win, H, d as doc, N as NAMESPACE, a as promiseResolve, b as bootstrapLazy } from './index-9fbf6b93.js';
 import { g as globalScripts } from './app-globals-0f993ce5.js';
 
 /*
- Stencil Client Patch Browser v2.7.0 | MIT Licensed | https://stenciljs.com
+ Stencil Client Patch Browser v2.14.2 | MIT Licensed | https://stenciljs.com
  */
 const getDynamicImportFunction = (namespace) => `__sc_import_${namespace.replace(/\s|-/g, '_')}`;
 const patchBrowser = () => {
@@ -20,6 +20,10 @@ const patchBrowser = () => {
     }
     if (BUILD.profile && !performance.mark) {
         // not all browsers support performance.mark/measure (Safari 10)
+        // because the mark/measure APIs are designed to write entries to a buffer in the browser that does not exist,
+        // simply stub the implementations out.
+        // TODO(STENCIL-323): Remove this patch when support for older browsers is removed (breaking)
+        // @ts-ignore
         performance.mark = performance.measure = () => {
             /*noop*/
         };
@@ -57,7 +61,7 @@ const patchBrowser = () => {
         if (BUILD.dynamicImportShim && !win.customElements) {
             // module support, but no custom elements support (Old Edge)
             // @ts-ignore
-            return import(/* webpackChunkName: "polyfills-dom" */ './dom-3fba5032.js').then(() => opts);
+            return import(/* webpackChunkName: "polyfills-dom" */ './dom-a385e381.js').then(() => opts);
         }
     }
     return promiseResolve(opts);
@@ -121,5 +125,5 @@ const patchCloneNodeFix = (HTMLElementPrototype) => {
 
 patchBrowser().then(options => {
   globalScripts();
-  return bootstrapLazy([["safety-slider-arrows",[[0,"safety-slider-arrows",{"slideCount":[2,"slide-count"],"activeSlide":[2,"active-slide"],"prevArrowInnerHTML":[1,"prev-arrow"],"nextArrowInnerHTML":[1,"next-arrow"],"isInfinite":[4,"is-infinite"],"prevAriaLabel":[1,"prev-aria-label"],"nextAriaLabel":[1,"next-aria-label"],"uuid":[1]}]]],["safety-slider-dots",[[0,"safety-slider-dots",{"activeDot":[2,"active-dot"],"dotCount":[2,"dot-count"],"dotAriaLabel":[1,"dot-aria-label"],"uuid":[1]}]]],["safety-slider-window",[[4,"safety-slider-window",{"activeSlide":[2,"active-slide"],"isInfinite":[516,"is-infinite"],"uuid":[1],"rootWidth":[32]},[[9,"resize","windowResizeHandler"],[0,"safetySliderInfiniteLoopAdjustment","infiniteLoopAdjustmentHandler"],[0,"safetySliderApplyTransitionDuration","applyTransitionDurationHandler"]]]]],["safety-slider",[[4,"safety-slider",{"isInfinite":[4,"infinite"],"prevArrowInnerHTML":[1,"prev-arrow"],"hasNoArrows":[4,"no-arrows"],"hasNoDots":[4,"no-dots"],"nextArrowInnerHTML":[1,"next-arrow"],"prevArrowAriaLabel":[1,"prev-arrow-aria-label"],"nextArrowAriaLabel":[1,"next-arrow-aria-label"],"dotAriaLabel":[1,"dot-aria-label"],"activeSlide":[32],"setActiveSlide":[64]},[[0,"safetySliderNavigationClick","onSafetySliderDotClick"]]]]]], options);
+  return bootstrapLazy([["safety-slider-arrows",[[0,"safety-slider-arrows",{"slideCount":[2,"slide-count"],"activeSlide":[2,"active-slide"],"prevArrowInnerHTML":[1,"prev-arrow"],"nextArrowInnerHTML":[1,"next-arrow"],"isInfinite":[4,"is-infinite"],"prevAriaLabel":[1,"prev-aria-label"],"nextAriaLabel":[1,"next-aria-label"],"uuid":[1]}]]],["safety-slider-dots",[[0,"safety-slider-dots",{"activeDot":[2,"active-dot"],"dotCount":[2,"dot-count"],"dotAriaLabel":[1,"dot-aria-label"],"uuid":[1]}]]],["safety-slider-window",[[4,"safety-slider-window",{"activeSlide":[2,"active-slide"],"isInfinite":[516,"is-infinite"],"uuid":[1],"trackTransitionDuration":[2,"track-transition-duration"],"isDraggable":[4,"is-draggable"],"rootWidth":[32]},[[9,"resize","windowResizeHandler"],[0,"safetySliderInfiniteLoopAdjustment","infiniteLoopAdjustmentHandler"],[0,"safetySliderApplyTransitionDuration","applyTransitionDurationHandler"],[1,"mousedown","mouseDownHandler"],[1,"mousemove","mouseMoveHandler"],[1,"mouseleave","mouseLeaveHandler"],[1,"mouseup","mouseUpHandler"]]]]],["safety-slider",[[4,"safety-slider",{"isInfinite":[4,"infinite"],"prevArrowInnerHTML":[1,"prev-arrow"],"hasNoArrows":[4,"no-arrows"],"hasNoDots":[4,"no-dots"],"nextArrowInnerHTML":[1,"next-arrow"],"prevArrowAriaLabel":[1,"prev-arrow-aria-label"],"nextArrowAriaLabel":[1,"next-arrow-aria-label"],"dotAriaLabel":[1,"dot-aria-label"],"trackTransitionDuration":[2,"track-transition-duration"],"noDrag":[4,"no-drag"],"activeSlide":[32],"setActiveSlide":[64]},[[0,"safetySliderSlideChange","slideChangeHandler"]]]]]], options);
 });
