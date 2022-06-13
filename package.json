@@ -37,6 +37,6 @@
     "postcss-cli": "^8.3.1",
     "postcss-import": "^14.0.2",
     "precss": "^4.0.0",
-    "safety-slider": "^0.5.1"
+    "safety-slider": "^0.7.0"
   }
 }
