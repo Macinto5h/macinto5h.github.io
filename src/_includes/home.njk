@@ -1,28 +1,6 @@
 ---
 layout: layout.njk
-title: Welcome to Mac's Website
 ---
-<section class="jumbotron">
-  <h1>Hi, I'm Mac!</h1>
-  <p><em>I am a Software Engineer. See more about me and my portfolio below!</em></p>
-</section>
-<section class="section -dark-to-teal">
-  <div class="content">
-    {{ content | safe }}
-  </div>
-</section>
-<section class="section -teal">
-  <div class="content">
-  <h2 style="text-align:center;">Portfolio</h2>
-    <safety-slider class="portfolio" no-arrows>
-      {% for project in site.portfolio %}
-        <a href="{{ project.href }}" aria-label="{{ project.name }}" class="portfolio__card">
-          <picture>
-            <source type="image/webp" srcset="{{ project.webpSrc }}">
-            <img src="{{ project.jpgSrc }}" alt="{{ project.name }} thumbnail" loading="lazy" width="314" height="314">
-          </picture>
-        </a>
-      {% endfor %}
-    </safety-slider>
-  </div>
+<section class="min-vh-100 d-flex align-items-center justify-content-center flex-column">
+  {{ content | safe }}
 </section>
