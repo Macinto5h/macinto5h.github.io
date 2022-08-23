@@ -1,0 +1,11 @@
+extends layout.pug
+
+block main
+  .text-center
+    | !{content}
+    safety-slider.mx-auto.pt-5(no-arrows, no-drag)
+      each project in site.portfolio
+        a(href=project.href, aria-label=project.name)
+          picture
+            source(type="image/webp", srcset=project.webpSrc)
+            img(src=project.jpgSrc, alt=project.name, loading="lazy", width="314", height="314")

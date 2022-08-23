@@ -1,5 +1,5 @@
 ---
-layout: layout.njk
+layout: default.pug
 title: My Blog
 description: Mac's blog
 ---

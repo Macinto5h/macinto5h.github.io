@@ -1,5 +1,5 @@
 ---
-layout: home.njk
+layout: home.pug
 title: Welcome to my website
 description: Hi, my name is Mac and this is my website.
 ---
