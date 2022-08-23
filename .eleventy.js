@@ -11,10 +11,8 @@ module.exports = function(eleventyConfig) {
       output: 'dist',
     },
     templateFormats: [
-      'njk',
+      'pug',
       'md'
-    ],
-    markdownTemplateEngine: 'njk',
-    htmlTemplateEngine: 'njk'
+    ]
   };
 };
