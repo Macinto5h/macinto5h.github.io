@@ -24,8 +24,8 @@ html(lang="en")
     script(type="module", src="/assets/js/safety-slider/safety-slider.esm.js")
     script(nomodule, src="/assets/js/safety-slider/safety-slider.js")
 
-  body.bg-dark.text-light
-    nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
+  body.text-dark.bg-light
+    nav.navbar.navbar-expand-lg.bg-light
       .container-fluid
         a.navbar-brand(href="/") MAC'S SITE
         button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation")
@@ -43,12 +43,12 @@ html(lang="en")
     main
       .container.py-5
         block main
-    footer.bg-secondary.py-3
+    footer.bg-light.py-3
       .container-fluid
-        ul.list-unstyled
-          li
-            a.link-light(href="https://github.com/Macinto5h", aria-label="My Github page") GitHub
-          li
-            a.link-light(href="https://stackoverflow.com/users/12248104/macintosh", aria-label="My Stack Overflow page") Stack Overflow
+        ul.list-unstyled.d-flex.flex-row.justify-content-center
+          li.p-3
+            a.link-primary(href="https://github.com/Macinto5h", aria-label="My Github page") GitHub
+          li.p-3
+            a.link-primary(href="https://stackoverflow.com/users/12248104/macintosh", aria-label="My Stack Overflow page") Stack Overflow
     script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js", integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk", crossorigin="anonymous")
     script(src="/assets/js/bootstrap/bootstrap.min.js")
