@@ -56,6 +56,6 @@ $font-family-sans-serif: 'Jura',
 
 // 8. Add additional custom code here
 safety-slider.hydrated {
-  --safety-slider-btn-color: #{$light};
-  --safety-slider-btn-disabled-color: #{$primary};
+  --safety-slider-btn-color: #{$dark};
+  --safety-slider-btn-disabled-color: #{$secondary};
 }
