@@ -15,7 +15,7 @@ Sometimes I will build websites like this one in my spare time.
 Other times I will work on a side project unrelated to my day to day tech stack.
 
 When I'm away from the screen, you can usually find me doing the following:
-- hanging out with my wife, cats and bunnies. 👫🐈🐈🐇🐇
+- hanging out with my wife, cats and bunnies. 👫🐈🐈🐈🐇
 - improving my chess game ♔
 - strumming the ukulele ♪
 - playing video games 🎮
