@@ -1,22 +1,23 @@
 ---
-layout: default.pug
-title: About Me
-description: Hi, my name is Mac. I have been in software development professionally for a little over three years now. I specialize in full stack web application development using TypeScript, Java, and Groovy.
+layout: default.njk
+
+pageTitle: About Me
+pageDescription: Hi, my name is Mac. I have been in software development professionally for a little over three years now. I specialize in full stack web application development using TypeScript, Java, and Groovy.
 ---
 
 # About Me
 
-Hi, my name is Macallan Camara, but you can call me Mac if you would like.
+Hi, my name is Mac.
 
-I have been a software developer for the past three years.
-I specialize in full stack web application development using TypeScript, Java, and Groovy.
+I have been a professional software developer for the past four years.
+I specialize in full stack web application development particularly with the Spring and Angular frameworks.
 
 Sometimes I will build websites like this one in my spare time.
-Other times I will work on a side project unrelated to my day to day tech stack.
+Or I might pick up working on a project unrelated to anything I have done before.
 
 When I'm away from the screen, you can usually find me doing the following:
-- hanging out with my wife, cats and bunnies. 👫🐈🐈🐈🐇
-- improving my chess game ♔
-- strumming the ukulele ♪
-- playing video games 🎮
-- or enjoying the great outdoors 🏕️
+- Hanging out with my wife, cats and bunny.
+- Improving my chess game.
+- Strumming the Kalimba.
+- Playing video games.
+- Or enjoying the great outdoors (especially national parks).
