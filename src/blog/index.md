@@ -1,7 +1,8 @@
 ---
-layout: default.pug
-title: My Blog
-description: Mac's blog
+layout: default.njk
+
+pageTitle: My Blog
+pageDescription: Mac's blog
 ---
 
 # My Blog
